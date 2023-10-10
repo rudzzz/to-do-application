@@ -17,6 +17,9 @@ public class ToDo {
     private boolean deleted;
     private int priority;
 
+    public ToDo() {
+
+    }
     public ToDo(String name, String description, boolean completed, int priority) {
 
     }
