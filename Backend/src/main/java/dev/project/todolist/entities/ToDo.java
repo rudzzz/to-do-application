@@ -1,6 +1,7 @@
 package dev.project.todolist.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="Todos")
@@ -8,11 +9,17 @@ public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String name;
+    @NotBlank
     private String description;
     private boolean completed;
     private boolean deleted;
     private int priority;
+
+    public ToDo(String name, String description, boolean completed, int priority) {
+
+    }
 
     public Long getId() {
         return id;
