@@ -21,7 +21,10 @@ public class ToDo {
 
     }
     public ToDo(String name, String description, boolean completed, int priority) {
-
+        this.name = name;
+        this.description = description;
+        this.completed = completed;
+        this.priority = priority;
     }
 
     public Long getId() {
